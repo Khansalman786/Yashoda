@@ -12,20 +12,21 @@ const Navigation = () => {
   return (
     <header className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#home" className="text-2xl font-bold text-pink-600">
+        <a href="#home" className="text-2xl font-extrabold text-pink-600">
           <img
-            src="https://progenesisivf.com/wp-content/uploads/elementor/thumbs/website-landing-page-logo-qf4csbq02m4fjc1j5enkfev1diikay45momn83862q.png"
-            alt=""
+            src="https://yashodaivfcentre.com/wp-content/uploads//yashoda-ivf-logo-1536x408.png"
+            alt="Logo"
+            className="h-12"
           />
         </a>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-6 items-center">
+        <nav className="hidden md:flex space-x-8 items-center">
           {menuItems.map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-gray-700 hover:text-pink-600 transition duration-300"
+              className="text-gray-700 hover:text-pink-600 font-medium text-lg transition duration-300 transform hover:scale-105"
             >
               {item}
             </a>
@@ -35,9 +36,9 @@ const Navigation = () => {
           <div className="relative">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="flex items-center text-gray-700 hover:text-pink-600 transition duration-300"
+              className="flex items-center text-gray-700 hover:text-pink-600 font-medium text-lg transition duration-300 transform hover:scale-105"
             >
-              Services <ChevronDown className="w-4 h-4 ml-1" />
+              Services <ChevronDown className="w-5 h-5 ml-2 transition duration-300" />
             </button>
             <AnimatePresence>
               {dropdownOpen && (
@@ -45,13 +46,13 @@ const Navigation = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-40 overflow-hidden"
+                  className="absolute top-full mt-2 bg-white shadow-lg rounded-md w-48 overflow-hidden"
                 >
                   {services.map((service) => (
                     <a
                       key={service}
                       href={`#${service.toLowerCase()}`}
-                      className="block px-4 py-2 text-gray-700 hover:bg-pink-100"
+                      className="block px-5 py-3 text-gray-700 hover:bg-pink-100 transition duration-300"
                     >
                       {service}
                     </a>
@@ -61,7 +62,7 @@ const Navigation = () => {
             </AnimatePresence>
           </div>
 
-          <button className="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition duration-300">
+          <button className="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition duration-300 transform hover:scale-105">
             Book Appointment
           </button>
         </nav>
@@ -83,20 +84,20 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-white shadow-md"
+            className="md:hidden bg-white shadow-lg"
           >
-            <nav className="flex flex-col items-center space-y-4 py-4">
+            <nav className="flex flex-col items-center space-y-6 py-6">
               {[...menuItems, "Services"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 hover:text-pink-600 transition duration-300"
+                  className="text-gray-700 font-medium text-lg hover:text-pink-600 transition duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   {item}
                 </a>
               ))}
-              <button className="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition duration-300">
+              <button className="bg-pink-600 text-white px-6 py-3 rounded-full hover:bg-pink-700 transition duration-300 transform hover:scale-105">
                 Book Appointment
               </button>
             </nav>

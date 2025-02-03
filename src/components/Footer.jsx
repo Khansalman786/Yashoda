@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-10 text-gray-400">
           {/* Logo & Description */}
           <div>
-            <h3 className="text-2xl font-bold text-white">Progenesis</h3>
+            <h3 className="text-2xl font-bold text-white">Yashoda IVF</h3>
             <p className="mt-3">
               Providing expert care for your journey to parenthood.
             </p>
